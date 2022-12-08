@@ -34,4 +34,20 @@ describe("day2 part1", () => {
       expect(day2.pazzle1(input)).toEqual(15);
     });
   });
+  describe("calcOutcome2", () => {
+    it("should return 0 if X", () => {
+      expect(day2.calcOutcome2("X")).toEqual(0);
+    });
+    it("should return 3 if Y", () => {
+      expect(day2.calcOutcome2("Y")).toEqual(3);
+    });
+    it("should return 6 if Z", () => {
+      expect(day2.calcOutcome2("Z")).toEqual(6);
+    });
+  });
+  describe("puzzle2", () => {
+    it("should return total score", () => {
+      expect(day2.pazzle2(input)).toEqual(12);
+    });
+  });
 });

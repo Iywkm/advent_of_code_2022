@@ -7,28 +7,20 @@ export class Day1 {
     return list.map((listEl) => listEl.reduce((pre, cur) => pre + cur));
   };
 
-  translateList = (list: Array<string>): Array<Array<number>> => {
-    let result: Array<Array<number>> = [[]];
-    let count = 0;
-    list.forEach((el) => {
-      if (el !== "") {
-        result[count].push(Number(el));
-      } else {
-        result.push([]);
-        count++;
-      }
-    });
-    return result.filter((list) => list.length !== 0);
+  translateList = (input: string): Array<Array<number>> => {
+    return input
+      .split(/\n{2}/)
+      .map((str) => str.split(/\n/).map((str) => Number(str)));
   };
 
-  pazzle1 = (list: Array<string>): number => {
-    const translatedList = this.translateList(list);
+  pazzle1 = (input: string): number => {
+    const translatedList = this.translateList(input);
     const totalCaloriesList = this.createTotalCalories(translatedList);
     return this.findMostCalories(totalCaloriesList);
   };
 
-  pazzle2 = (list: Array<string>): number => {
-    const translatedList = this.translateList(list);
+  pazzle2 = (input: string): number => {
+    const translatedList = this.translateList(input);
     const totalCaloriesList = this.createTotalCalories(translatedList);
     const sortedList = totalCaloriesList.sort((a, b) => a - b);
     const topThreeTotalList = sortedList.slice(-3);
