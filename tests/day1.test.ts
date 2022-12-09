@@ -1,6 +1,6 @@
 import { Day1 } from "../src/day1";
 
-describe("day1 part1", () => {
+describe("day1", () => {
   const day1 = new Day1();
   describe("findMostCalories", () => {
     it("should return most calories", () => {

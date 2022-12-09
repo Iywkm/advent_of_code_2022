@@ -1,6 +1,6 @@
 import { Day2 } from "../src/day2";
 
-describe("day2 part1", () => {
+describe("day2", () => {
   const input: Array<Array<string>> = [
     ["A", "Y"],
     ["B", "X"],
