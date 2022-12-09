@@ -2,6 +2,7 @@ import * as fs from "fs";
 import { Day1 } from "./day1";
 import { Day2 } from "./day2";
 import { Day3 } from "./day3";
+import { Day4 } from "./day4";
 
 console.log("----Day1----");
 const fileContent = fs.readFileSync("./input/day1.txt", "utf-8");
@@ -30,3 +31,11 @@ const totalPrioritiesOfItems = day3.pazzle1(day3Input);
 console.log("pazzle1: " + totalPrioritiesOfItems);
 const totalPrioritiesOfBadges = day3.pazzle2(day3Input);
 console.log("pazzle2: " + totalPrioritiesOfBadges);
+
+console.log("----Day4----");
+const day4Input = fs.readFileSync("./input/day4.txt", "utf-8");
+const day4 = new Day4();
+const numberOfFullContainPairs = day4.pazzle1(day4Input);
+console.log("pazzle1: " + numberOfFullContainPairs);
+const numberOfOverlapPairs = day4.pazzle2(day4Input);
+console.log("pazzle2: " + numberOfOverlapPairs);
