@@ -3,6 +3,8 @@ import { Day1 } from "./day1";
 import { Day2 } from "./day2";
 import { Day3 } from "./day3";
 import { Day4 } from "./day4";
+import { Day5 } from "./day5";
+import { Day6 } from "./day6";
 
 console.log("----Day1----");
 const fileContent = fs.readFileSync("./input/day1.txt", "utf-8");
@@ -39,3 +41,19 @@ const numberOfFullContainPairs = day4.pazzle1(day4Input);
 console.log("pazzle1: " + numberOfFullContainPairs);
 const numberOfOverlapPairs = day4.pazzle2(day4Input);
 console.log("pazzle2: " + numberOfOverlapPairs);
+
+console.log("----Day5----");
+const day5Input = fs.readFileSync("./input/day5.txt", "utf-8");
+const day5 = new Day5();
+const cratesOnTopOfEachStacks = day5.pazzle1(day5Input);
+console.log("pazzle1: " + cratesOnTopOfEachStacks);
+const cratesOnTopOfEachStacks9001 = day5.pazzle2(day5Input);
+console.log("pazzle2: " + cratesOnTopOfEachStacks9001);
+
+console.log("----Day6----");
+const day6Input = fs.readFileSync("./input/day6.txt", "utf-8");
+const day6 = new Day6();
+const positionOfPacketMarker = day6.findPositionOfMarker(day6Input, 4);
+console.log("pazzle1: " + positionOfPacketMarker);
+const positionOfMessageMarker = day6.findPositionOfMarker(day6Input, 14);
+console.log("pazzle2: " + positionOfMessageMarker);
