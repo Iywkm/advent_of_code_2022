@@ -5,6 +5,7 @@ import { Day3 } from "./day3";
 import { Day4 } from "./day4";
 import { Day5 } from "./day5";
 import { Day6 } from "./day6";
+import { Day7 } from "./day7";
 
 console.log("----Day1----");
 const fileContent = fs.readFileSync("./input/day1.txt", "utf-8");
@@ -57,3 +58,13 @@ const positionOfPacketMarker = day6.findPositionOfMarker(day6Input, 4);
 console.log("pazzle1: " + positionOfPacketMarker);
 const positionOfMessageMarker = day6.findPositionOfMarker(day6Input, 14);
 console.log("pazzle2: " + positionOfMessageMarker);
+
+console.log("----Day7----");
+const day7Input = fs.readFileSync("./input/day7.txt", "utf-8");
+const day7 = new Day7();
+const actionList = day7.formatAction(day7Input);
+const fileSystem = day7.parseAction(actionList);
+const totalSize = day7.pazzle1(fileSystem);
+console.log("pazzle1: " + totalSize);
+const deleteDirSize = day7.pazzle2(fileSystem);
+console.log("pazzle1: " + deleteDirSize);
