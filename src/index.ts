@@ -1,11 +1,14 @@
 import * as fs from "fs";
 import { Day1 } from "./day1";
+import { Day10 } from "./day10";
 import { Day2 } from "./day2";
 import { Day3 } from "./day3";
 import { Day4 } from "./day4";
 import { Day5 } from "./day5";
 import { Day6 } from "./day6";
 import { Day7 } from "./day7";
+import { Day8 } from "./day8";
+import { Day9 } from "./day9";
 
 console.log("----Day1----");
 const fileContent = fs.readFileSync("./input/day1.txt", "utf-8");
@@ -68,3 +71,27 @@ const totalSize = day7.pazzle1(fileSystem);
 console.log("pazzle1: " + totalSize);
 const deleteDirSize = day7.pazzle2(fileSystem);
 console.log("pazzle1: " + deleteDirSize);
+
+console.log("----Day8----");
+const day8Input = fs.readFileSync("./input/day8.txt", "utf-8");
+const day8 = new Day8();
+const numberOfVisibleTrees = day8.pazzle1(day8Input);
+console.log("pazzle1: " + numberOfVisibleTrees);
+const highestSenicScore = day8.pazzle2(day8Input);
+console.log("pazzle2: " + highestSenicScore);
+
+console.log("----Day9----");
+const day9Input = fs.readFileSync("./input/day9.txt", "utf-8");
+const day9 = new Day9();
+const numberOfPosition = day9.part1(day9Input);
+console.log("part1: " + numberOfPosition);
+const numberOfPosition2 = day9.part2(day9Input);
+console.log("part2: " + numberOfPosition2);
+
+console.log("----Day10----");
+const day10Input = fs.readFileSync("./input/day10.txt", "utf-8");
+const day10 = new Day10();
+const totalScore = day10.part1(day10Input);
+console.log("part1: " + totalScore);
+// const numberOfPosition2 = day10.part2(day10Input);
+// console.log("part2: " + numberOfPosition2);
