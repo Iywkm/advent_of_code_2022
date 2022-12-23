@@ -1,6 +1,9 @@
 import * as fs from "fs";
 import { Day1 } from "./day1";
 import { Day10 } from "./day10";
+import { Day11 } from "./day11";
+import { Day12 } from "./day12";
+import { Day13 } from "./day13";
 import { Day2 } from "./day2";
 import { Day3 } from "./day3";
 import { Day4 } from "./day4";
@@ -93,5 +96,29 @@ const day10Input = fs.readFileSync("./input/day10.txt", "utf-8");
 const day10 = new Day10();
 const totalScore = day10.part1(day10Input);
 console.log("part1: " + totalScore);
-// const numberOfPosition2 = day10.part2(day10Input);
-// console.log("part2: " + numberOfPosition2);
+const crtImage = day10.part2(day10Input);
+console.log("part2:\n" + crtImage);
+
+console.log("----Day11----");
+const day11Input = fs.readFileSync("./input/day11.txt", "utf-8");
+const day11 = new Day11();
+const monkeyLevel = day11.part1(day11Input);
+console.log("part1: " + monkeyLevel);
+const monkeyLevel2 = day11.part2(day11Input);
+console.log("part2: " + monkeyLevel2);
+
+console.log("----Day12----");
+const day12Input = fs.readFileSync("./input/day12.txt", "utf-8");
+const day12 = new Day12();
+const fweestSteps = day12.part1(day12Input);
+console.log("part1: " + fweestSteps);
+const fweestSteps2 = day12.part2(day12Input);
+console.log("part2: " + fweestSteps2);
+
+console.log("----Day13----");
+const day13Input = fs.readFileSync("./input/day13.txt", "utf-8");
+const day13 = new Day13();
+const sumOfTheIndices = day13.part1(day13Input);
+console.log("part1: " + sumOfTheIndices);
+const decordKey = day13.part2(day13Input);
+console.log("part2: " + decordKey);
